@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <title>Music website</title>
+        <link rel="icon" type="image/x-icon" href="icon.avif">
+        <link rel="stylesheet" href="animation.css">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main">
+
+             <!--Control bar-->
+             <div class="topBar">
+                <button onclick="sidebar()"><i class="bx bx-chevrons-right" ></i></button>
+                <div class="option">
+                    <button><i class="bx bx-music" ></i></button>
+                    <button><i class="bx bx-volume-low" ></i></button>
+                    <button><i class="bx bx-edit"></i></button>
+                </div>
+                <button onclick="open_p()"><i class="bx bx-menu" ></i></button>
+             </div>
+             <div class="playing">
+                <div class="image">
+                    <img src="bg_image.webp" alt="image">
+                </div>
+             </div>
+
+             <!--Control part-->
+             <div class="controlPart">
+                <div class="song_title">
+                    <p>Song title</p>
+                    <p>Artist name </p>
+                </div>
+
+                <div class="controlButton">
+                    <div class="Range_slider">
+                        <input type="range" min="0" max="100" id="slider" value="0">
+                        <p>3:00</p>
+                    </div>
+
+                    <div class="mainButton">
+                        <button id="prev"><i class="bx bx-chevron-left" ></i></button>
+                        <button id="play"><i class="bx bx-play"></i></button>
+                        <button id="Next"><i class="bx bx-chevron-right" ></i></button>
+                    </div>
+                </div>
+             </div>
+
+             <!--Playlist-->
+             <div class="play">
+                <div class="songs">
+                    <p id="p_title">Song name</p>
+                    <p id="p_artist">Artist name</p>
+                    <button ><i class="bx bx-play"></i></button>
+                </div>
+                <div class="songs active_song">
+                    <p id="p_title">Song name</p>
+                    <p id="p_artist">Artist name</p>
+                    <button ><i class="bx bx-play"></i></button>
+                </div>
+                <div class="songs">
+                    <p id="p_title">Song name</p>
+                    <p id="p_artist">Artist name</p>
+                    <button><i class="bx bx-play"></i></button>
+                </div>
+                <div class="songs">
+                    <p id="p_title">Song name</p>
+                    <p id="p_artist">Artist name</p>
+                    <button><i class="bx bx-play"></i></button>
+                </div>
+             </div>
+        </div>
+
+        <script>
+            let play = document.querySelector('.play');
+            let options = document.querySelector('.option');
+
+            function open_p(){
+                play.classList.toggle('active');
+            }
+
+            function sidebar(){
+                options.classList.toggle('active2')
+            }
+        </script>
+    </body>
+</html>
